@@ -1,4 +1,124 @@
 <!DOCTYPE html>
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<div id="main">
+      <!-- header section start -->
+      <div class="header_section">
+         <div class="row">
+            <div class="col-sm-4">
+               <div class="search_icon"><img src="images/search-icon.png"></div>
+            </div>
+            <div class="col-sm-4">
+               <div class="logo"><img src="images/logo.png"></div>
+            </div>
+            <div class="col-sm-4">
+               <div class="togle_3">
+                  <div class="left_main">
+                     <div class="menu_main">
+                        <a href="#"><i class="fa fa-fw fa-user"></i> Login</a>
+                     </div>
+                  </div>
+                  <div class="middle_main">
+                     <div class="shoping_bag"><img src="images/shopping-bag.png"></div>
+                  </div>
+                  <div class="right_main">
+                     <div class="togle_main"><a class="class="openbtn" onclick="openNav()"><img src="images/togle-menu-icon.png" style="max-width: 100%;"></a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+     </div>
+    
+      <div class="container">
+         <h1 class="contact_text"><strong>댕강이에게 질문하기</strong></h1>
+      </div>
+            <div class="contact_main">
+               <div class="enput_section">
+                  <div class="email_box">
+                    <div class="input_main">
+                       <div class="container">
+                          <form action="/action_page.php">
+                            <div class="form-group">
+                              <input type="text" class="email-bt" placeholder="이름" name="이름">
+                            </div>
+                            <div class="form-group">
+                              <input type="text" class="email-bt" placeholder="이메일" name="이메일">
+                            </div>
+                            <div class="form-group">
+                              <input type="text" class="email-bt" placeholder="핸드폰 번호" name="핸드폰 번호">
+                            </div>
+
+                            <div class="form-group">
+                                <textarea class="massage-bt" placeholder="사용불가" rows="5" id="comment" name="사용불가"></textarea>
+                            </div>
+                          </form>
+                       </div>
+                       <div class="send_btn">
+                        <button type="button" class="main_bt"><a href="#">보내기</a></button>
+                       </div>
+                    </div>
+                 </div>
+               </div>
+            </div>
+   </div>
+<br>
+
+
+     <button class="accordion">공지사항</button>
+     <div class="panel">
+       <p>댓글 기능은 Disqus에서 가져온 코드입니당!! 웹페이지 꾸미는게 많이 어렵네요!! 감사합니다</p>
+     </div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
+
 <html lang="en">
    <head>
       <!-- basic -->
